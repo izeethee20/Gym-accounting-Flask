@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if form %}
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.coach_check }}
+            {{ form.coach_check.label }}<br>
+        </p>
+
+        <p>{{ form.submit() }}</p>
+    </form>
+{% endif %}
+{% endblock %}

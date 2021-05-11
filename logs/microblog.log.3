@@ -1,0 +1,63 @@
+2021-05-11 16:38:58,050 ERROR: Exception on /user/Vlad [GET] [in /home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/routes.py", line 78, in user
+    return render_template('user.html', user=user, posts=posts.items, next_url=next_url, prev_url=prev_url)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/templating.py", line 137, in render_template
+    return _render(
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/templates/user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/templates/base.html", line 36, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/templates/user.html", line 18, in block "content"
+    {% include '_post.html' %}
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: _post.html
+2021-05-11 16:39:24,276 INFO: Microblog startup [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-11 16:55:33,177 INFO: Microblog startup [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-11 16:55:43,157 INFO: Microblog startup [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-11 16:55:45,675 ERROR: Exception on / [GET] [in /home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/routes.py", line 18, in index
+    form = PostForm()
+NameError: name 'PostForm' is not defined
+2021-05-11 16:56:12,400 INFO: Microblog startup [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-11 16:58:33,798 INFO: Microblog startup [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]

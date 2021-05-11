@@ -1,0 +1,73 @@
+2021-05-11 14:58:10,590 ERROR: Exception on /coach_identifier [POST] [in /home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/sqlalchemy/sql/coercions.py", line 488, in _literal_coercion
+    return expr._bind_param(operator, element, type_=bindparam_type)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 4436, in _bind_param
+    return BindParameter(
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 1402, in __init__
+    self.type = _compared_to_type.coerce_compared_value(
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/sqlalchemy/sql/type_api.py", line 664, in coerce_compared_value
+    _coerced_type = _resolve_value_to_type(value)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/sqlalchemy/sql/sqltypes.py", line 3240, in _resolve_value_to_type
+    raise exc.ArgumentError(
+sqlalchemy.exc.ArgumentError: Object <User Vlad> is not legal as a SQL literal value
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/routes.py", line 124, in coach_identifier
+    user = User.query.filter_by(username=current_user).first()
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 1743, in filter_by
+    clauses = [
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 1744, in <listcomp>
+    _entity_namespace_key(from_entity, key) == value
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/sqlalchemy/sql/operators.py", line 360, in __eq__
+    return self.operate(eq, other)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/sqlalchemy/orm/attributes.py", line 301, in operate
+    return op(self.comparator, *other, **kwargs)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/sqlalchemy/sql/operators.py", line 360, in __eq__
+    return self.operate(eq, other)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/sqlalchemy/orm/properties.py", line 424, in operate
+    return op(self.__clause_element__(), *other, **kwargs)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/sqlalchemy/sql/annotation.py", line 221, in __eq__
+    return self.__element.__class__.__eq__(self, other)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/sqlalchemy/sql/operators.py", line 360, in __eq__
+    return self.operate(eq, other)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 831, in operate
+    return op(self.comparator, *other, **kwargs)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/sqlalchemy/sql/operators.py", line 360, in __eq__
+    return self.operate(eq, other)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/sqlalchemy/sql/type_api.py", line 75, in operate
+    return o[0](self.expr, op, *(other + o[1:]), **kwargs)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/sqlalchemy/sql/default_comparator.py", line 97, in _boolean_compare
+    obj = coercions.expect(
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/sqlalchemy/sql/coercions.py", line 175, in expect
+    resolved = impl._literal_coercion(
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/sqlalchemy/sql/coercions.py", line 490, in _literal_coercion
+    self._raise_for_expected(element, err=err)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/sqlalchemy/sql/coercions.py", line 475, in _raise_for_expected
+    return super(ExpressionElementImpl, self)._raise_for_expected(
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/sqlalchemy/sql/coercions.py", line 270, in _raise_for_expected
+    util.raise_(exc.ArgumentError(msg, code=code), replace_context=err)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+sqlalchemy.exc.ArgumentError: SQL expression element or literal value expected, got <User Vlad>.
+2021-05-11 14:58:22,502 INFO: Microblog startup [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-11 15:00:01,953 INFO: Microblog startup [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-11 15:09:14,367 INFO: Microblog startup [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-11 15:09:28,758 INFO: Microblog startup [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-11 15:10:21,401 INFO: Microblog startup [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
