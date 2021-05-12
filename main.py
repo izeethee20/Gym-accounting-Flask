@@ -35,14 +35,10 @@
 # def make_shell_context():
 #     return {'db': db, 'User': User, 'Post': Post}
 # *
-from sqlalchemy.ext.asyncio import engine
+from app import app
 
-from app.models import Post
-
-Post.__table__.drop()
-
-# if __name__ == '__main__':
-#     flask.app()
+if __name__ == '__main__':
+    app.run()
 
 ### Adding/removing coach-status ###
 
