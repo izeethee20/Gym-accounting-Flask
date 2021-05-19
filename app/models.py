@@ -20,7 +20,6 @@ class User(UserMixin, db.Model):
     # subscriptions = db.relationship('Subscription', backref='sub', lazy='dynamic')
 
 
-
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
 
@@ -38,6 +37,7 @@ class Accounting(db.Model):
     dateOfStart = db.Column(db.DateTime, default=datetime.today())
     dateOfEnd = db.Column(db.DateTime, default=datetime.today())
     status = db.Column(db.Boolean, default=False)
+    time_id = db.Column(db.Integer, db.ForeignKey('time.id'))
 
     def __repr__(self):
         return '<Order № {}>'.format(self.id)
@@ -47,8 +47,13 @@ class Sub(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(64), index=True, unique=True)
     Description = db.Column(db.String(140))
-    price = db.Column(db.Numeric(5))
+    price = db.Column(db.Integer)
     pool = db.Column(db.Boolean, default=False)
 
     def __repr__(self):
         return '<Subscription {}>'.format(self.name)
+
+
+class Time(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    partOfDay = db.Column(db.String(64), unique=True)

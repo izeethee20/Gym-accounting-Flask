@@ -1,0 +1,107 @@
+2021-05-20 00:04:39,055 ERROR: Exception on /index [GET] [in /home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/routes.py", line 19, in index
+    return render_template('index.html', title='Home', subs=subs)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/templating.py", line 137, in render_template
+    return _render(
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/templates/base.html", line 35, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/templates/index.html", line 6, in block "content"
+    <a href="{{ url_for('choose_time', id=sub.id) }}"><td>{{sub.name, sub.Description, sub.price, sub.pool}}</td></a><br>
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 2216, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/helpers.py", line 357, in url_for
+    rv = url_adapter.build(
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/werkzeug/routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'choose_time' with values ['id']. Did you forget to specify values ['id_']?
+2021-05-20 00:04:58,260 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-20 00:05:04,527 ERROR: Exception on /choose_time/1 [GET] [in /home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+TypeError: choose_time() got an unexpected keyword argument 'id'
+2021-05-20 00:07:49,297 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-20 00:08:41,019 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-20 00:20:26,158 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-20 00:22:22,934 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-20 00:22:31,571 ERROR: Exception on /choose_time [GET] [in /home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/routes.py", line 113, in choose_time
+    name = sub.name
+AttributeError: 'BaseQuery' object has no attribute 'name'
+2021-05-20 00:22:53,926 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-20 00:22:56,705 ERROR: Exception on /choose_time [GET] [in /home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/routes.py", line 113, in choose_time
+    names = sub.name
+AttributeError: 'BaseQuery' object has no attribute 'name'
+2021-05-20 00:23:18,004 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]

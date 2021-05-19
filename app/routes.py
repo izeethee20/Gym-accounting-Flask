@@ -5,7 +5,7 @@ from werkzeug.urls import url_parse
 from app import app
 from forms import LoginForm, EditProfileForm, CoachIdentifierForm
 from flask_login import current_user, login_user, login_required
-from app.models import User
+from app.models import User, Sub
 from flask_login import logout_user
 from app import db
 from forms import RegistrationForm
@@ -15,7 +15,8 @@ from forms import RegistrationForm
 @app.route('/index', methods=['GET', 'POST'])
 @login_required
 def index():
-    return render_template('index.html', title='Home')
+    subs = Sub.query.all()
+    return render_template('index.html', title='Home', subs=subs)
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -102,6 +103,15 @@ def coach_identifier():
             flash('Now we know that you are a coach :)')
             return redirect(url_for('index'))
     return render_template('coach_identifier.html', title='Coach identifier', form=form)
+
+
+@app.route('/choose_time', methods=['GET', 'POST'])
+@login_required
+def choose_time():
+    id = request.args.get('id')
+    sub = Sub.query.filter_by(id=id).first()
+    return render_template('choose_time.html', sub=sub)
+
 
 
 @app.route('/coach_room', methods=['GET', 'POST'])
