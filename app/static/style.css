@@ -1,0 +1,120 @@
+.button-1 {
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    padding: 15px 30px;
+    color: #ffffff;
+    border: 3px solid #d94927;
+    font-size: 24px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: .3s linear;
+    border-radius: 5px;
+}
+.button-1:before, .button-1:after, .link-content:before, .link-content:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 15px;
+    height: 15px;
+    transition: .3s linear;
+}
+.button-1:before {
+    left: -1px;
+    top: -1px;
+    border-left: 1px solid #d94927;
+    border-top: 1px solid #d94927;
+}
+.button-1:after {
+    bottom: -1px;
+    right: -1px;
+    border-bottom: 1px solid #d94927;
+    border-right: 1px solid #d94927;
+}
+.link-content:after {
+    right: -1px;
+    top: -1px;
+    border-right: 1px solid #d94927;
+    border-top: 1px solid #d94927;
+}
+.link-content:before {
+    left: -1px;
+    bottom: -1px;
+    border-bottom: 1px solid #d94927;
+    border-left: 1px solid #d94927;
+}
+.button-1:hover {
+    color: #d94927;
+    border-color: #d94927;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    }
+body {
+    background-image: url('images/ganteli.jpg');
+    opacity: 0,1;
+}
+.sliding-button {
+  text-decoration: none;
+  color: white;
+  font-size: 34px;
+  text-shadow: #ff3000 1px 1px 10px;
+  display: inline-block;
+  position: relative;
+  padding: 30px 60px;
+  border: 1px solid;
+  text-align: center;
+  width: 20%;
+  font-weight: 700;
+  border-image: linear-gradient(180deg, #ff3000, #ff3000, #ed0200, #ed0200);
+  border-image-slice: 1;
+  margin: 10px 20px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  overflow: hidden;
+  letter-spacing: 2px;
+  transition: .8s cubic-bezier(.165, .84, .44, 1);
+}
+.sliding-button:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 0;
+  width: 100%;
+  z-index: -1;
+  color: white;
+  background: linear-gradient(180deg, #ff3000, #ff3000, #ed0200, #ed0200);
+  transition: .8s cubic-bezier(.165, .84, .44, 1);
+}
+.sliding-button:hover {
+  background: rgba(255, 255, 255, 0);
+}
+.sliding-button:hover:before {
+  bottom: 0%;
+  top: auto;
+  height: 100%;
+}
+li {
+    list-style-type: none; /* Убираем маркеры */
+   }
+p{
+  color: white;
+  font-size: 34px;
+  text-shadow: #ff3000 1px 1px 10px;
+  font-weight: 700;
+}
+
+.block1 {
+    float: left;
+    width: 57%;
+    padding: 10px;
+}
+
+.block2 {
+    float: right;
+    width: 28.5%;
+}
+.center{
+    }

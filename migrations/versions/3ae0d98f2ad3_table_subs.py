@@ -1,8 +1,8 @@
-"""sub table
+"""table subs
 
-Revision ID: e82cf8fda4e9
-Revises: 9b4b19a466a7
-Create Date: 2021-05-12 12:31:13.381133
+Revision ID: 3ae0d98f2ad3
+Revises: 57d0d97a5950
+Create Date: 2021-05-21 22:49:14.736965
 
 """
 from alembic import op
@@ -10,8 +10,8 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'e82cf8fda4e9'
-down_revision = '9b4b19a466a7'
+revision = '3ae0d98f2ad3'
+down_revision = '57d0d97a5950'
 branch_labels = None
 depends_on = None
 
@@ -22,7 +22,7 @@ def upgrade():
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('name', sa.String(length=64), nullable=True),
     sa.Column('Description', sa.String(length=140), nullable=True),
-    sa.Column('price', sa.Numeric(precision=5), nullable=True),
+    sa.Column('price', sa.Integer(), nullable=True),
     sa.Column('pool', sa.Boolean(), nullable=True),
     sa.PrimaryKeyConstraint('id')
     )

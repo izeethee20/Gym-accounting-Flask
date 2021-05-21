@@ -1,0 +1,106 @@
+2021-05-21 20:14:31,833 ERROR: Exception on /payment [GET] [in /home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/routes.py", line 153, in payment
+    return render_template('payment.html', time_id=time_id, coach_id=coach_id, form=form)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/templating.py", line 137, in render_template
+    return _render(
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/templates/payment.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/templates/base.html", line 40, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/templates/payment.html", line 7, in block "content"
+    {{ form.DateOfStart.calendar() }}<br>
+jinja2.exceptions.UndefinedError: 'wtforms.fields.core.DateField object' has no attribute 'calendar'
+2021-05-21 20:14:45,529 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-21 20:16:36,493 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-21 20:17:10,323 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-21 20:29:14,287 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-21 20:36:13,371 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-21 20:36:23,919 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-21 20:36:34,923 ERROR: Exception on /payment [GET] [in /home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/routes.py", line 153, in payment
+    return render_template('payment.html', time_id=time_id, coach_id=coach_id, form=form)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/templating.py", line 137, in render_template
+    return _render(
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/templates/payment.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/templates/base.html", line 40, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/templates/payment.html", line 7, in block "content"
+    {{ render_field(form.DateOfStart) }}        </p>
+jinja2.exceptions.UndefinedError: 'render_field' is undefined
+2021-05-21 20:39:48,444 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-21 20:41:40,772 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-21 20:41:45,882 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-21 20:42:41,952 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-21 20:42:50,583 ERROR: Exception on /payment [GET] [in /home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/routes.py", line 149, in payment
+    form = PayForm()
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/wtforms/form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/forms.py", line 64, in __init__
+    self.DateOfStart.data = datetime.date.today()
+AttributeError: 'method_descriptor' object has no attribute 'today'
+2021-05-21 20:43:11,607 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-21 20:43:50,026 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-21 20:59:16,569 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]

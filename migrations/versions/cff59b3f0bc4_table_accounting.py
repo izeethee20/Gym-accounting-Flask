@@ -1,8 +1,8 @@
-"""accounting table
+"""table accounting
 
-Revision ID: 5d8625a44d05
-Revises: e82cf8fda4e9
-Create Date: 2021-05-12 12:31:41.595104
+Revision ID: cff59b3f0bc4
+Revises: 3ae0d98f2ad3
+Create Date: 2021-05-21 22:49:30.378415
 
 """
 from alembic import op
@@ -10,8 +10,8 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '5d8625a44d05'
-down_revision = 'e82cf8fda4e9'
+revision = 'cff59b3f0bc4'
+down_revision = '3ae0d98f2ad3'
 branch_labels = None
 depends_on = None
 
@@ -25,7 +25,10 @@ def upgrade():
     sa.Column('dateOfStart', sa.DateTime(), nullable=True),
     sa.Column('dateOfEnd', sa.DateTime(), nullable=True),
     sa.Column('status', sa.Boolean(), nullable=True),
+    sa.Column('time_id', sa.Integer(), nullable=True),
+    sa.Column('coach_id', sa.Integer(), nullable=True),
     sa.ForeignKeyConstraint(['sub_id'], ['sub.id'], ),
+    sa.ForeignKeyConstraint(['time_id'], ['time.id'], ),
     sa.ForeignKeyConstraint(['user_id'], ['user.id'], ),
     sa.PrimaryKeyConstraint('id')
     )

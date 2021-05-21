@@ -1,8 +1,21 @@
 {% extends "base.html" %}
-
 {% block content %}
-    <h1>Hi, {{ current_user.username }}!</h1>
-        <td>You chose subscription: {{sub.name}}</td>
-        <td>What is time prefer for you?</td>
+        <p>You chose subscription: {{sub.name}}</p>
+        <pre><p>What is time prefer for you?                         You can choose a vacant coach at first:</p></pre><br><br>
 
+    <div class="block1">
+        {% for time in times %}
+    <!--        <a href="{{ url_for('choose_time', id=sub.id) }}"><td>{{sub.name, sub.Description, sub.price, sub.pool}}</td></a><br>-->
+            <li><a href="{{ url_for('confirm', id=time.id,st='time', sub_id=sub_id) }}" class="sliding-button">{{time.partOfDay}}</a></li>
+        {% endfor %}
+    </div>
+
+    <div class="block2"><br>
+        {% for coach in coaches %}
+            {% if coach.isCoach %}
+    <!--        <a href="{{ url_for('choose_time', id=sub.id) }}"><td>{{sub.name, sub.Description, sub.price, sub.pool}}</td></a><br>-->
+                <li><a href="{{ url_for('confirm', id=coach.id,st='coach') }}" class="sliding-button">{{coach.username}}</a></li>
+            {% endif %}
+        {% endfor %}
+    </div>
 {% endblock %}

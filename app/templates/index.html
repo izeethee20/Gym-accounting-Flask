@@ -1,8 +1,0 @@
-{% extends "base.html" %}
-
-{% block content %}
-    <h1>Hi, {{ current_user.username }}!</h1>
-    {% for sub in subs %}
-        <a href="{{ url_for('choose_time', id=sub.id) }}"><td>{{sub.name, sub.Description, sub.price, sub.pool}}</td></a><br>
-    {% endfor %}
-{% endblock %}

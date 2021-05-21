@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+    <p>Choose a vacant coach:</p>
+    {% for i in data %}
+        {% if status=='time' %}
+            {% if i.isCoach %}
+                <li><a href="{{ url_for('payment', id_time=id,coach_id=i.id, sub_id=sub_id) }}" class="sliding-button">{{ i.username }}</a></li>
+            {% endif %}
+        {% else %}
+            NIHAO
+        {% endif %}
+    {% endfor %}
+{% endblock %}

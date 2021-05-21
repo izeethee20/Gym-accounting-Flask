@@ -1,3 +1,30 @@
+###adding subs###
+# from app.models import Sub
+# from app import db
+#
+# sub = Sub(name='Semi-monthly-standard', Description='''Price: 300
+#                                              Age: any
+#                                              Duration: 14 days
+#                                              Pool: no''', price=300, pool=False)
+# db.session.add(sub)
+# db.session.commit()
+# ###edit###
+# s = Sub.query.get(2)
+# s.pool = False
+# print(s.pool, s.name)
+######################
+
+
+###adding time###
+# from app import db
+# from app.models import Time
+#
+# time = Time(partOfDay='18:00-21:00')
+# db.session.add(time)
+# db.session.commit()
+#####################
+
+
 # from app.models import User
 # print(User())
 # u = User(username='vmch_')
@@ -18,11 +45,10 @@
 # for u in users:
 #     db.session.delete(u)
 # db.session.commit()
-
-
+import datetime
 
 from app import db
-from app.models import Accounting, User, Sub,  Time
+# from app.models import Accounting, User, Sub,  Time
 
 # a = Accounting(user_id=1, sub_id=1, status=True)
 # a = Accounting.query.get(1)
@@ -35,6 +61,23 @@ from app.models import Accounting, User, Sub,  Time
 # db.session.add(a)
 # db.session.commit()
 # print(a.id,a.user_id ,a.sub_id,a.dateOfStart,a.dateOfEnd,a.status,a.time_id)
+# from app.models import Accounting
+# sub_id=3
+# dateTemp = input().format(datetime)
+# dateS = datetime.datetime.strptime(dateTemp, "%d-%m-%Y")
+# if sub_id == 3:
+#     dateE = dateS + datetime.timedelta(days=14)
+# else:
+#     dateE = dateS + datetime.timedelta(days=28)
+# data = Accounting(user_id=1, sub_id=sub_id, dateOfStart=dateS, dateOfEnd=dateE, status=True, time_id=2, coach_id=1)
+# print(data.dateOfStart, data.dateOfEnd, data.time_id)
+# from app.models import Accounting
+#
+# a = Accounting.query.all()
+# for i in a:
+#     print(i.id, i.dateOfStart, i.dateOfEnd, i.user_id)
+
+
 
 # ** add person to db wth password
 # u = User(username='john', email='john@example.com')
@@ -75,6 +118,21 @@ from app import app
 # db.session.commit()
 # print(s.id, s.name, s.Description, s.price, s.pool)
 # print(s)
+# date1 = input().format(datetime)
+# dateS = datetime.datetime.strptime(date1, "%m/%d/%y")
+# dateE = dateS + datetime.timedelta(days=28)
+# data = Accounting(user_id=1, sub_id=2, dateOfStart=dateS, dateOfEnd=dateE, status=True, time_id=3)
+# print(data.dateOfStart, data.dateOfEnd, data.status)# coaches = User.query.all()
+# for co in coaches:
+#     if co.isCoach==True:
+#         print(co.username)
+
+
+
+
+# data = Accounting.query.all()
+# for i in data:
+#     print(i.status, i.id)
 
 
 

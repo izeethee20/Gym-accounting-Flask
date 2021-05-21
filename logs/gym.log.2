@@ -1,4 +1,4 @@
-2021-05-20 00:04:05,475 ERROR: Exception on /index [GET] [in /home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py:1891]
+2021-05-22 00:51:37,626 ERROR: Exception on /home [GET] [in /home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -14,8 +14,8 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/routes.py", line 19, in index
-    return render_template('index.html', title='Home', subs=subs)
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/routes.py", line 137, in home
+    return render_template('home.html', title="Home", subIs=subIs)
   File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/templating.py", line 137, in render_template
     return _render(
   File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/templating.py", line 120, in _render
@@ -26,12 +26,12 @@ Traceback (most recent call last):
     reraise(*rewrite_traceback_stack(source=source))
   File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
     raise value.with_traceback(tb)
-  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/templates/index.html", line 1, in top-level template code
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/templates/home.html", line 1, in top-level template code
     {% extends "base.html" %}
-  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/templates/base.html", line 35, in top-level template code
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/templates/base.html", line 42, in top-level template code
     {% block content %}{% endblock %}
-  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/templates/index.html", line 6, in block "content"
-    <a href="{{ url_for('choose_time', id=sub.id) }}"><td>{{sub.name, sub.Description, sub.price, sub.pool}}</td></a><br>
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/templates/home.html", line 10, in block "content"
+    <a href="{{ url_for('user/<current_user>') }}" class="button-1"><span class="link-content">Go to profile</span></a>
   File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/helpers.py", line 370, in url_for
     return appctx.app.handle_url_build_error(error, endpoint, values)
   File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 2216, in handle_url_build_error
@@ -42,8 +42,9 @@ Traceback (most recent call last):
     rv = url_adapter.build(
   File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/werkzeug/routing.py", line 2179, in build
     raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'choose_time' with values ['id']. Did you forget to specify values ['id_']?
-2021-05-20 00:04:10,430 ERROR: Exception on /index [GET] [in /home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py:1891]
+werkzeug.routing.BuildError: Could not build url for endpoint 'user/<current_user>'. Did you mean 'register' instead?
+2021-05-22 00:52:11,026 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-22 00:52:12,767 ERROR: Exception on /home [GET] [in /home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -59,8 +60,8 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/routes.py", line 19, in index
-    return render_template('index.html', title='Home', subs=subs)
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/routes.py", line 137, in home
+    return render_template('home.html', title="Home", subIs=subIs)
   File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/templating.py", line 137, in render_template
     return _render(
   File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/templating.py", line 120, in _render
@@ -71,12 +72,12 @@ Traceback (most recent call last):
     reraise(*rewrite_traceback_stack(source=source))
   File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
     raise value.with_traceback(tb)
-  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/templates/index.html", line 1, in top-level template code
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/templates/home.html", line 1, in top-level template code
     {% extends "base.html" %}
-  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/templates/base.html", line 35, in top-level template code
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/templates/base.html", line 42, in top-level template code
     {% block content %}{% endblock %}
-  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/templates/index.html", line 6, in block "content"
-    <a href="{{ url_for('choose_time', id=sub.id) }}"><td>{{sub.name, sub.Description, sub.price, sub.pool}}</td></a><br>
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/templates/home.html", line 10, in block "content"
+    <a href="{{ url_for('user, username=current_user.username') }}" class="button-1"><span class="link-content">Go to profile</span></a>
   File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/helpers.py", line 370, in url_for
     return appctx.app.handle_url_build_error(error, endpoint, values)
   File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 2216, in handle_url_build_error
@@ -87,5 +88,10 @@ Traceback (most recent call last):
     rv = url_adapter.build(
   File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/werkzeug/routing.py", line 2179, in build
     raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'choose_time' with values ['id']. Did you forget to specify values ['id_']?
-2021-05-20 00:04:36,830 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+werkzeug.routing.BuildError: Could not build url for endpoint 'user, username=current_user.username'. Did you mean 'about_us' instead?
+2021-05-22 00:52:35,893 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-22 00:55:42,521 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-22 00:56:08,291 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-22 00:58:15,096 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-22 00:59:04,139 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-22 01:00:34,729 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]

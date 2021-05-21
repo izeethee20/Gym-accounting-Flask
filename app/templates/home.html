@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h1></h1>
+{% if subIs %}
+    <p>
+        Hi, {{ current_user.username }}! Thank you for being with us
+<br><br><br><br>
+         More info in your profile
+    </p>
+    <a href="{{ url_for('user' , username=current_user.username) }}" class="button-1"><span class="link-content">Go to profile</span></a>
+
+{% else %}
+<p>EFGASDGsfdsAdsffgnds</p>
+{% endif %}
+{% endblock %}

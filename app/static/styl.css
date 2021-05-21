@@ -1,0 +1,33 @@
+h1 {
+    color: black;
+    font-family: Impact;
+    font-size: 200%;
+}
+p  {
+    color: black;
+    font-family: courier;
+    font-size: 100%;
+    border-width: 1px;
+    padding: 10px;/*отступ (пробел) между текстом и границей:*/
+    margin: 10px;/*поле (пробел) за пределами границы:*/
+}
+.translucent {
+    opacity: 0.1;
+}
+#container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+#background, #content {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#background {
+    background-image: url('images/fit-zal.jpg');
+}
+.menu{
+    background-color: black;
+    color: white;
+}

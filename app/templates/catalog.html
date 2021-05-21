@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div>
+    {% for sub in subs %}
+    <ul>
+        <li><a href="{{ url_for('choose_time', id=sub.id,sub_id=sub.id) }}" class="sliding-button">{{sub.name}}</a></li>
+    </ul>
+        {% endfor %}
+</div>
+{% endblock %}

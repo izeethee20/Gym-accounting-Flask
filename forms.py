@@ -1,5 +1,8 @@
+import datetime
+
 from flask_wtf import FlaskForm
-from wtforms import PasswordField, BooleanField,  StringField, TextAreaField, SubmitField
+from wtforms import PasswordField, BooleanField, StringField, TextAreaField, SubmitField, TimeField
+from wtforms.fields.html5 import DateField
 from wtforms.validators import ValidationError, DataRequired, Email, EqualTo, Length
 from app.models import User
 
@@ -52,3 +55,11 @@ class CoachIdentifierForm(FlaskForm):
     submit = SubmitField('Submit')
 
 
+class PayForm(FlaskForm):
+    DateOfStart = DateField(label='Enter date of start', format='%d/%m/%Y', validators = [DataRequired('please select date')])
+    submit = SubmitField('Submit')
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        if not self.DateOfStart.data:
+            self.DateOfStart.data = datetime.date.today()
