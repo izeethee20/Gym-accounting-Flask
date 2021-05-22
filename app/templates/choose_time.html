@@ -1,21 +1,23 @@
 {% extends "base.html" %}
 {% block content %}
-        <p>You chose subscription: {{sub.name}}</p>
-        <pre><p>What is time prefer for you?                         You can choose a vacant coach at first:</p></pre><br><br>
 
     <div class="block1">
+        <p>You chose subscription: {{sub.name}}</p>
+        <p>What is time prefer for you?</p>
         {% for time in times %}
     <!--        <a href="{{ url_for('choose_time', id=sub.id) }}"><td>{{sub.name, sub.Description, sub.price, sub.pool}}</td></a><br>-->
-            <li><a href="{{ url_for('confirm', id=time.id,st='time', sub_id=sub_id) }}" class="sliding-button">{{time.partOfDay}}</a></li>
+            <li><a href="{{ url_for('confirm', time_id=time.id,st='time', sub_id=sub_id) }}" class="sliding-button">{{time.partOfDay}}</a></li>
         {% endfor %}
     </div>
 
-    <div class="block2"><br>
-        {% for coach in coaches %}
-            {% if coach.isCoach %}
-    <!--        <a href="{{ url_for('choose_time', id=sub.id) }}"><td>{{sub.name, sub.Description, sub.price, sub.pool}}</td></a><br>-->
-                <li><a href="{{ url_for('confirm', id=coach.id,st='coach') }}" class="sliding-button">{{coach.username}}</a></li>
-            {% endif %}
-        {% endfor %}
-    </div>
+<!--    <div class="block2"><br>-->
+<!--        <p>Also, you can choose a vacant personal coach at first:</p>-->
+<!--        {% for coach in coaches %}-->
+<!--            {% if coach.isCoach %}-->
+<!--    &lt;!&ndash;        <a href="{{ url_for('choose_time', id=sub.id) }}"><td>{{sub.name, sub.Description, sub.price, sub.pool}}</td></a><br>&ndash;&gt;-->
+<!--                <pre><li class="turn-left"><a href="{{ url_for('confirm', id=coach.id,st='coach') }}" class="sliding-button">{{coach.username}}</a></li></pre>-->
+<!--            {% endif %}-->
+<!--        {% endfor %}-->
+<!--    </div>-->
+    <a href="{{ url_for('catalog') }}" class="back-button">Back</a>
 {% endblock %}

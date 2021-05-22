@@ -1,11 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
+    <p>You chose a subscription: {{sub.name}}</p>
+    <p>Your coach is {{coach.username}} at {{time.partOfDay}}</p>
     <form action="" method="post"  novalidate>
         {{ form.hidden_tag() }}
         <p>
             {{ form.DateOfStart.label }}
             {{ form.DateOfStart }}<br>
         </p>
-        <p>{{ form.submit() }}</p>
+        <p class="new">{{ form.submit() }}</p>
     </form>
+    <a href="{{ url_for('confirm', sub_id=sub_id, time_id=time_id) }}" class="back-button">Back</a>
 {% endblock %}

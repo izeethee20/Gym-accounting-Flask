@@ -1,4 +1,4 @@
-2021-05-21 23:58:23,970 ERROR: Exception on /payment [POST] [in /home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py:1891]
+2021-05-22 17:15:50,303 ERROR: Exception on /coach_room [GET] [in /home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -14,11 +14,11 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/routes.py", line 157, in payment
-    dateS = datetime.strptime(dateTemp, "%d-%m-%Y").date()
-TypeError: strptime() argument 1 must be str, not datetime.date
-2021-05-21 23:58:34,776 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
-2021-05-21 23:58:42,394 ERROR: Exception on /payment [POST] [in /home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py:1891]
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/routes.py", line 162, in coach_room
+    trainings[i.time_id] = a.user_id
+AttributeError: 'list' object has no attribute 'user_id'
+2021-05-22 17:16:34,985 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-22 17:16:36,733 ERROR: Exception on /coach_room [GET] [in /home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -34,15 +34,11 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/routes.py", line 157, in payment
-    dateS = datetime.strptime(dateTemp, "%d-%m-%Y").date()
-  File "/usr/lib/python3.8/_strptime.py", line 568, in _strptime_datetime
-    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
-  File "/usr/lib/python3.8/_strptime.py", line 349, in _strptime
-    raise ValueError("time data %r does not match format %r" %
-ValueError: time data '2021-02-02' does not match format '%d-%m-%Y'
-2021-05-21 23:59:07,426 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
-2021-05-21 23:59:14,365 ERROR: Exception on /payment [POST] [in /home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py:1891]
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/routes.py", line 162, in coach_room
+    ad = a.user_id
+AttributeError: 'list' object has no attribute 'user_id'
+2021-05-22 17:17:34,859 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-22 17:17:36,369 ERROR: Exception on /coach_room [GET] [in /home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -58,15 +54,27 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/routes.py", line 157, in payment
-    dateS = datetime.strptime(dateTemp, "%d-%m-%Y").date()
-  File "/usr/lib/python3.8/_strptime.py", line 568, in _strptime_datetime
-    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
-  File "/usr/lib/python3.8/_strptime.py", line 349, in _strptime
-    raise ValueError("time data %r does not match format %r" %
-ValueError: time data 'None' does not match format '%d-%m-%Y'
-2021-05-22 00:01:01,598 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
-2021-05-22 00:01:10,045 ERROR: Exception on /payment [POST] [in /home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py:1891]
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/routes.py", line 164, in coach_room
+    return render_template('coach_room.html', title='Coach room', times=times)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/templating.py", line 137, in render_template
+    return _render(
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/templates/coach_room.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/templates/base.html", line 41, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/templates/coach_room.html", line 6, in block "content"
+    <li><p class="times">{{times.keys(i)}}</p></li>
+jinja2.exceptions.UndefinedError: 'list object' has no attribute 'keys'
+2021-05-22 17:18:08,363 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-22 17:18:10,333 ERROR: Exception on /coach_room [GET] [in /home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -82,31 +90,23 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/routes.py", line 157, in payment
-    dateS = datetime.strptime(dateTemp, "%Y-%m-%d").date()
-  File "/usr/lib/python3.8/_strptime.py", line 568, in _strptime_datetime
-    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
-  File "/usr/lib/python3.8/_strptime.py", line 349, in _strptime
-    raise ValueError("time data %r does not match format %r" %
-ValueError: time data 'None' does not match format '%Y-%m-%d'
-2021-05-22 00:02:51,614 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
-2021-05-22 00:02:59,179 ERROR: Exception on /payment [POST] [in /home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py:1891]
-Traceback (most recent call last):
-  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/routes.py", line 158, in payment
-    dateS = datetime.date(form.DateOfStart.data)
-TypeError: descriptor 'date' for 'datetime.datetime' objects doesn't apply to a 'NoneType' object
-2021-05-22 00:06:14,822 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/routes.py", line 163, in coach_room
+    return render_template('coach_room.html', title='Coach room', times=trainings)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/templating.py", line 137, in render_template
+    return _render(
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/templates/coach_room.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/templates/base.html", line 41, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/templates/coach_room.html", line 6, in block "content"
+    <li><p class="times">{{times.keys(i)}}</p></li>
+TypeError: keys() takes no arguments (1 given)
+2021-05-22 17:18:48,275 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]

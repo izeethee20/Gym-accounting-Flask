@@ -1,6 +1,6 @@
 ###adding subs###
-# from app.models import Sub
-# from app import db
+from app.models import Sub, Accounting, Time
+from app import db
 #
 # sub = Sub(name='Semi-monthly-standard', Description='''Price: 300
 #                                              Age: any
@@ -9,12 +9,33 @@
 # db.session.add(sub)
 # db.session.commit()
 # ###edit###
-# s = Sub.query.get(2)
+# s = Sub.query.get(3)
+# s.Description = "\n           Price - 650\n           Age - any\n           Duration - 28 days\n           Pool - included"
+# s.Description = "\n           Price - 500\n           Age - any\n           Duration - 28 days\n           Pool - no"
+# s.Description = "           Price - 300\n           Age - any\n           Duration - 14 days\n           Pool - no"
 # s.pool = False
-# print(s.pool, s.name)
+# print(s.Description, s.name)
 ######################
 
 
+# times = [1, 2, 3, 4]
+# t = Time.query.all()
+# for i in times:
+#     print(t[i-1].partOfDay)
+# a = Accounting.query.get(2)
+# print(a.user_id, a.time_id, a.coach_id)
+# for i in a:
+#     if i.user_id == 3:
+#         subIs = True
+#         curr_a = i
+#         curr_a.time_id=4
+#         temp = curr_a.time_id
+#         print(temp)
+#         t = Time.query.get(temp)
+#         print(t.id)
+# te = Time.query.all()
+# for i in te:
+#     print(i.id,i.partOfDay)
 ###adding time###
 # from app import db
 # from app.models import Time

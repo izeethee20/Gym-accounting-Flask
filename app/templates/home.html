@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% block content %}
-<h1></h1>
 {% if subIs %}
     <p>
         Hi, {{ current_user.username }}! Thank you for being with us
@@ -9,7 +8,10 @@
     </p>
     <a href="{{ url_for('user' , username=current_user.username) }}" class="button-1"><span class="link-content">Go to profile</span></a>
 
+{% elif coach_check %}
+    <p>Thanks for working with us</p>
 {% else %}
-<p>EFGASDGsfdsAdsffgnds</p>
+<p>Hello, let's choose a subscription for you</p>
+<a href="{{ url_for('catalog') }}" class="sliding-button">Catalog</a>
 {% endif %}
 {% endblock %}

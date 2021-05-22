@@ -1,10 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
+<br>
 <div>
     {% for sub in subs %}
     <ul>
-        <li><a href="{{ url_for('choose_time', id=sub.id,sub_id=sub.id) }}" class="sliding-button">{{sub.name}}</a></li>
+        <li><a href="{{ url_for('choose_time',sub_id=sub.id) }}" class="sliding-button">{{sub.name}}</a></li>
+        <a href="{{url_for('info', sub_id=sub.id)}}"class="info">More info</a>
     </ul>
         {% endfor %}
 </div>

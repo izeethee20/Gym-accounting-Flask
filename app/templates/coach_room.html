@@ -1,5 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-Hi, coach!
+<p>Today pupils are waiting for you in:</p>
+    {% for i in times %}
+        <li><p class="times">{{i}}</p></li>
+    {% endfor %}
 {% endblock %}

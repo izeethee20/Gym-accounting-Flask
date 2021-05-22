@@ -1,12 +1,4 @@
-2021-05-21 23:36:07,581 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
-2021-05-21 23:36:43,230 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
-2021-05-21 23:39:53,944 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
-2021-05-21 23:40:14,008 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
-2021-05-21 23:40:42,457 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
-2021-05-21 23:42:00,846 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
-2021-05-21 23:43:02,360 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
-2021-05-21 23:44:54,793 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
-2021-05-21 23:44:56,715 ERROR: Exception on /payment [POST] [in /home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py:1891]
+2021-05-22 15:11:06,262 ERROR: Exception on /info/1 [GET] [in /home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -22,10 +14,8 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/routes.py", line 156, in payment
-    dateTemp = form.DateOfStart.data.format(datetime)
-AttributeError: 'datetime.date' object has no attribute 'format'
-2021-05-21 23:45:15,416 ERROR: Exception on /payment [POST] [in /home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py:1891]
+TypeError: info() got an unexpected keyword argument 'sub_id'
+2021-05-22 15:13:58,466 ERROR: Exception on /info/2 [GET] [in /home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -41,11 +31,20 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/routes.py", line 156, in payment
-    dateTemp = form.DateOfStart.data
-AttributeError: 'datetime.date' object has no attribute 'format'
-2021-05-21 23:45:48,312 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
-2021-05-21 23:46:00,070 ERROR: Exception on /payment [POST] [in /home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py:1891]
+TypeError: info() got an unexpected keyword argument 'sub_id'
+2021-05-22 15:15:15,554 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-22 15:17:19,104 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-22 15:18:31,205 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-22 15:20:46,807 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-22 15:23:23,099 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-22 15:23:27,636 ERROR: Exception on /choose_time [GET] [in /home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/sqlalchemy/sql/base.py", line 1580, in _entity_namespace_key
+    return getattr(ns, key)
+AttributeError: type object 'Sub' has no attribute 'sub_id'
+
+The above exception was the direct cause of the following exception:
+
 Traceback (most recent call last):
   File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -61,11 +60,20 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/routes.py", line 157, in payment
-    dateS = datetime.datetime.strptime(dateTemp, "%d/%m/%Y")
-AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
-2021-05-21 23:46:13,449 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
-2021-05-21 23:46:26,231 ERROR: Exception on /payment [POST] [in /home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py:1891]
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/routes.py", line 146, in choose_time
+    sub = Sub.query.filter_by(sub_id=sub_id).first()
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 1743, in filter_by
+    clauses = [
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 1744, in <listcomp>
+    _entity_namespace_key(from_entity, key) == value
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/sqlalchemy/sql/base.py", line 1582, in _entity_namespace_key
+    util.raise_(
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+sqlalchemy.exc.InvalidRequestError: Entity namespace for "sub" has no property "sub_id"
+2021-05-22 15:23:42,142 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-22 15:24:46,012 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-22 15:24:50,052 ERROR: Exception on /confirm [GET] [in /home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -79,33 +87,29 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/routes.py", line 157, in payment
-    dateS = datetime.strptime(dateTemp, "%d/%m/%Y")
-TypeError: strptime() argument 1 must be str, not datetime.date
-2021-05-21 23:48:04,198 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
-2021-05-21 23:48:18,305 ERROR: Exception on /payment [POST] [in /home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py:1891]
-Traceback (most recent call last):
-  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/routes.py", line 157, in payment
-    dateS = datetime.strptime(dateTemp, "%d/%m/%Y")
-  File "/usr/lib/python3.8/_strptime.py", line 568, in _strptime_datetime
-    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
-  File "/usr/lib/python3.8/_strptime.py", line 349, in _strptime
-    raise ValueError("time data %r does not match format %r" %
-ValueError: time data '2021-05-21' does not match format '%d/%m/%Y'
-2021-05-21 23:48:59,309 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/routes.py", line 182, in confirm
+    return render_template('confirm.html', title='Confirmation', data=res, status=status, id_time=id, sub_id=sub_id, time_id=time_id)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/templating.py", line 137, in render_template
+    return _render(
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/templates/confirm.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/templates/base.html", line 41, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/kroof/PycharmProjects/Gym_accounting_Flask/app/templates/confirm.html", line 3, in block "content"
+    <p>You chose subscription: {{sub.name}}</p>
+  File "/home/kroof/PycharmProjects/adminFor/venv/lib/python3.8/site-packages/jinja2/environment.py", line 471, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'sub' is undefined
+2021-05-22 15:25:34,308 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-22 15:25:54,453 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-22 15:26:51,231 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-22 15:27:25,049 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]
+2021-05-22 15:30:41,017 INFO: Gym accounting [in /home/kroof/PycharmProjects/Gym_accounting_Flask/app/__init__.py:41]

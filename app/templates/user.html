@@ -1,17 +1,27 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <table>
+    <div class="block4">
         <tr valign="top">
-            <td>
                 <p>User: {{ user.username }}</p>
                     {% if user.about_me %}<p>Status: {{ user.about_me }}</p>{% endif %}
                     {% if user.last_seen %}<p>Last seen on: {{ user.last_seen }}</p>{% endif %}
                     {% if user == current_user %}
                     <p><a href="{{ url_for('edit_profile') }}">Edit your profile</a></p>
                     {% endif %}
-            </td>
         </tr>
-    </table>
-    <hr>
+    </div>
+    <div class="block3">
+{% if subIs %}
+        <p class="right-side">Name of your subscription: {{ s.name }}</p>
+        <p class="right-side">Coach:{{trainer}} ( {{ t.partOfDay }} )</p>
+        <p class="right-side">Valid from: {{ curr_a.dateOfStart }}</p>
+        <p class="right-side">Valid until: {{ curr_a.dateOfEnd }}</p>
+        <p class="right-side">Description:<br><br> {{ s.Description }}</p>
+{% endif %}
+    {% if current_user.isCoach %}
+        <p class="right-side">Thanks for your work</p>
+    {% endif %}
+    </div>
+
 {% endblock %}

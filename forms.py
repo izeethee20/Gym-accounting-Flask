@@ -57,7 +57,7 @@ class CoachIdentifierForm(FlaskForm):
 
 class PayForm(FlaskForm):
     DateOfStart = DateField(label='Enter date of start', format='%d/%m/%Y', validators = [DataRequired('please select date')])
-    submit = SubmitField('Submit')
+    submit = SubmitField('Pay')
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

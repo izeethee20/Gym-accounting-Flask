@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<p>Name of Subscription: {{sub.name}}</p>
+<p>Description:<br>{{sub.Description}}</p>
+<a href="{{ url_for('catalog') }}" class="back-button">Back</a>
+
+{% endblock %}
